@@ -1,0 +1,11 @@
+---
+package:
+  docker-ce:
+    installed: true
+service:
+  docker:
+    enabled: true
+    running: false
+file:
+  /etc/docker/key.json:
+    exists: false
