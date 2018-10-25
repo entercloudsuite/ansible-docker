@@ -3,4 +3,7 @@
 - name: run the main role
   hosts: all
   roles:
-    - { role: ansible-docker }
+    - role: ansible-docker
+    - role: entercloudsuite.prometheus-exporter
+      prometheus_exporter_name: node_exporter
+      prometheus_exporter_version: 0.16.0
