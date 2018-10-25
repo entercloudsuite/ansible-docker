@@ -21,6 +21,9 @@
         - bzip2
         - gzip
         - git
+        - python-pip
+    - name: install docker-py
+      pip: name=docker-py
   roles:
     - role: ansible-docker
     - role: entercloudsuite.prometheus-exporter
