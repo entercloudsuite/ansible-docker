@@ -3,7 +3,11 @@
 - name: run the main role
   hosts: all
   roles:
-    - role: ansible-docker
-    - role: entercloudsuite.prometheus-exporter
-      prometheus_exporter_name: node_exporter
-      prometheus_exporter_version: 0.16.0
+    #- role: ansible-docker
+    #- role: ansible-prometheus-exporter
+    #  prometheus_exporter_name: node_exporter
+    #  prometheus_exporter_version: 0.16.0
+    - role: ansible-prometheus-exporter
+      prometheus_exporter_name: cadvisor_exporter
+      url: https://github.com/google/cadvisor/releases/download/v0.31.0/cadvisor
+      prometheus_exporter_is_archived: False
