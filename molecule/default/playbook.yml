@@ -26,6 +26,7 @@
       pip: name=docker-py
   roles:
     - role: ansible-docker
+    - role: entercloudsuite.filebeat
     - role: entercloudsuite.prometheus-exporter
       prometheus_exporter_name: node_exporter
       prometheus_exporter_version: 0.16.0
