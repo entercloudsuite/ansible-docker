@@ -94,6 +94,10 @@
             version: 1.0.1
           - src: entercloudsuite.filebeat
             version: 1.0.0
+          - src: entercloudsuite.beats
+            version: 1.0.0
+          - src: entercloudsuite.auditbeat
+            version: 1.0.0
         dest: "{{ script_path }}/requirements.yml"
         remote_src: yes
     - name: install python requirements
