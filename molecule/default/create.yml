@@ -29,7 +29,7 @@
     keypair_name: molecule_key
     keypair_path: "{{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/id_rsa"
 
-    nova_image: GNU/Linux Ubuntu Server 16.04 Xenial Xerus x64
+    nova_image: ubuntu1804-master-3
     nova_flavor: e3standard.x1
   tasks:
     - include: security_group.yml

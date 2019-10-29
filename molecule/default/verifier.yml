@@ -1,6 +1,8 @@
 ---
 - name: Verify
   hosts: all
+  become: yes
+  become_method: sudo
   vars:
     goss_version: v0.2.5
     goss_arch: amd64

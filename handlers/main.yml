@@ -1,5 +1,4 @@
 ---
-# handlers file
 - name: start_and_enable_docker
   service:
     name: docker

@@ -1,24 +1,7 @@
 ---
 package:
-  mcrouter:
+  docker:
     installed: true
-port:
-  tcp:11213:
-    listening: true
-    ip:
-      - 0.0.0.0
-service:
-  mcrouter:
-    enabled: true
-    running: true
-user:
-  mcrouter:
+file:
+  /etc/docker/key.json:
     exists: true
-    groups:
-      - mcrouter
-group:
-  mcrouter:
-    exists: true
-process:
-  mcrouter:
-    running: true

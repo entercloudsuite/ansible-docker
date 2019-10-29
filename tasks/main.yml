@@ -30,8 +30,6 @@
   copy:
     src: daemon.json
     dest: /etc/docker/daemon.json
-  notify:
-    - restart_docker
 
 - name: Remove node key
   file:
@@ -42,7 +40,7 @@
   debug:
     var: docker_end_status
 
-- name: Make sure Docker is stopped
+- name: Docker service enabled and in status "{{ docker_end_status }}"
   service:
     name: docker
     enabled: yes
