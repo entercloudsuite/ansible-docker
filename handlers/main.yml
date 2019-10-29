@@ -1,2 +1,17 @@
 ---
 # handlers file
+- name: start_and_enable_docker
+  service:
+    name: docker
+    enabled: yes
+    state: started
+
+- name: stop_docker
+  service:
+    name: docker
+    state: stopped
+
+- name: restart_docker
+  service:
+    name: docker
+    state: restarted

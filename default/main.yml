@@ -1,2 +1,2 @@
 ---
-# defaults vars
+docker_end_status: "stopped"

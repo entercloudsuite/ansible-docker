@@ -1,6 +1,8 @@
 ---
-
-- name: run the main role
+- name: Rum main roles
   hosts: all
+  become: yes
+  become_method: sudo
+  pre_tasks:
   roles:
-    - { role: ansible-docker }
+  - role: ansible-docker

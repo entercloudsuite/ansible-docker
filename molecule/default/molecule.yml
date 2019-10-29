@@ -2,11 +2,13 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
+  name: openstack
 lint:
   name: yamllint
 platforms:
   - name: instance-1
+    image: "ubuntu1804-master-3"
+    flavor: o1.highcpu-spot.x2
 provisioner:
   name: ansible
   options:
