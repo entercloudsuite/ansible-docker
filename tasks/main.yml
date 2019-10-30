@@ -39,6 +39,8 @@
   copy:
     src: daemon.json
     dest: /etc/docker/daemon.json
+  when: 
+    - docker_cgroup_driver == "systemd"
 
 - name: Remove node key
   file:
