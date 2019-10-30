@@ -1,2 +1,3 @@
 ---
 docker_end_status: "stopped"
+docker_version: 18.06.3~ce~3-0~ubuntu
