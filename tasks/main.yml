@@ -26,6 +26,15 @@
     update_cache: yes
     state: present
 
+- name: Configure Docker create /etc/docker folder
+  file:
+    path: /etc/docker
+    state: directory
+    recurse: yes
+    mode: 0700
+    owner: root
+    group: root
+
 - name: Configure Docker for user native systemd cgroupdriver
   copy:
     src: daemon.json
