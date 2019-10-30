@@ -1,7 +1,35 @@
 ---
-package:
-  docker:
-    installed: true
-file:
-  /etc/docker/key.json:
+user:
+  prometheus:
     exists: true
+    groups:
+      - prometheus
+    home: /home/prometheus
+group:
+  prometheus:
+    exists: true
+process:
+  prometheus:
+    running: true
+  alertmanager:
+    running: true
+service:
+  prometheus:
+    enabled: true
+    running: true
+  alertmanager:
+    enabled: true
+    running: true
+http:
+  http://localhost:9090:
+    status: 200
+    allow-insecure: false
+    no-follow-redirects: false
+    timeout: 5000
+    body: []
+  http://localhost:9093:
+    status: 200
+    allow-insecure: false
+    no-follow-redirects: false
+    timeout: 5000
+    body: []

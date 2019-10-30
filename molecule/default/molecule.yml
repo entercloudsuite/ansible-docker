@@ -2,13 +2,13 @@
 dependency:
   name: galaxy
 driver:
-  name: openstack
+  name: docker
 lint:
   name: yamllint
 platforms:
   - name: instance-1
-    image: "ubuntu1804-master-3"
-    flavor: o1.highcpu-spot.x2
+    groups:
+      - cluster
 provisioner:
   name: ansible
   options:
@@ -20,5 +20,14 @@ provisioner:
     destroy: destroy.yml
 scenario:
   name: default
+  test_sequence:
+    - destroy
+    - dependency
+    - syntax
+    - create
+    - prepare
+    - converge
+    - verify
+    - destroy
 verifier:
   name: goss
