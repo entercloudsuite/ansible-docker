@@ -26,5 +26,3 @@
         recreate: no
         log_driver: none
       with_items: "{{ molecule_yml.platforms }}"
-
-
