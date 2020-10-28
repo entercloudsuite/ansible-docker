@@ -1,4 +1,4 @@
 ---
 docker_end_status: "stopped"
-docker_version: 18.06.3~ce~3-0~ubuntu
+docker_version: 5:18.09.9~3-0~ubuntu-bionic
 docker_cgroup_driver: systemd
