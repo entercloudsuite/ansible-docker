@@ -1,14 +1,13 @@
 ---
 - name: Install prerequisites
   apt:
-    name: "{{ item }}"
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
     update_cache: yes
     state: present
-  with_items:
-    - "apt-transport-https"
-    - "ca-certificates"
-    - "curl"
-    - "software-properties-common"
 
 - name: Import Docker GPG key
   apt_key:
@@ -52,7 +51,7 @@
     var: docker_end_status
 
 - name: Docker service enabled and in status "{{ docker_end_status }}"
-  service:
-    name: docker
-    enabled: yes
+  systemd:
     state: "{{ docker_end_status }}"
+    daemon_reload: yes
+    name: docker

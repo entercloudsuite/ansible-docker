@@ -11,7 +11,7 @@
       docker_container:
         name: "{{ item.name }}"
         hostname: "{{ item.name }}"
-        image: solita/ubuntu-systemd:latest
+        image: automium/testenv:bionic
         privileged: true
         volumes:
           - /sys/fs/cgroup:/sys/fs/cgroup:ro

@@ -3,8 +3,6 @@ dependency:
   name: galaxy
 driver:
   name: docker
-lint:
-  name: yamllint
 platforms:
   - name: instance-1
     groups:
@@ -31,3 +29,5 @@ scenario:
     - destroy
 verifier:
   name: goss
+  lint:
+    name: yamllint
