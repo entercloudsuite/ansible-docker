@@ -15,6 +15,7 @@ provisioner:
   playbooks:
     create: create.yml
     prepare: prepare.yml
+    verify: verifier.yml
     destroy: destroy.yml
 scenario:
   name: default

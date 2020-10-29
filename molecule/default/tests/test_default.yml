@@ -3,7 +3,7 @@ file:
   "/etc/docker/daemon.json":
     exists: true
     mode: '0644'
-    size: 53
+    size: 109
     owner: root
     group: root
     filetype: file
